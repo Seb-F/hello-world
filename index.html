@@ -3,65 +3,61 @@
     <head>
         <title>Sebastian Frangiamore</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript">
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("header").text("Sebastian Frangiamore - Super Coder !");
-            });
-        });
-        </script>
-        <script src="app.js"></script>
+        <script type="text/javascript"></script>
+        <script src="seb.js"></script>
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+          body {
+                background-color: silver;
+               }
+        </style> 
+    </script>                 
     </head>
-    <style>
-        header { 
-            text-align: left;
-            font-family: Arial, Helvetica, sans-serif;
-            color:silver;
-            font-size: 12pt
-        }
-        h1, h2, p {
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            color: blue;
-        }
-        td {
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        li {
-            text-align: left;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 10pt
-        }
-        small{
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            color: black;
-            font-size: 9pt
-        }
-        </style>
     <body>
         <header>Sebastian Frangiamore</header>
         <main>
             <h1>Welcome to my page.</h1>
             <section id="profile">
-                <div id="skills">
+                <div id="image"><img src="chewbacca.png"></div>
+                <h3 id="roar">GRRRRAAAAR</h3>
+                <script>
+                   $(document).ready(function(){
+                       $("image").mouseenter(function(){
+                           $("h3").css({"opacity": "1.0", "color": "blue"});
+                        });
+                        $("image").mouseleave(function(){
+                            $("h3").css({"opacity": "0.0", "color": "silver"});
+                        });
+                   });
+                </script>
+                <p>
+                <small>Click to get Chewbacca to Scare away the Skills</small>
+                    <div id="toggle">
                     <li>HTML: 6/10</li>
-                    <li>CSS: 4/10</li>
+                    <li>CSS: 5/10</li>
                     <li>C#: 5/10</li>
-                </div>
+                    <li>Lockpicking: 6/10</li>
+                    <li>Star Wars General Knowledge: 8/10</li>
+                    <li>Balloon Modelling: 7/10</li>
+                    </div>
+                    <script>
+                        $(document).click(function(){
+                            $("#toggle").toggle("drop");
+                            $("h3").css({"opacity": "1.0", "color": "blue"});
+                        });
+                    </script>
                 <p>
                 <div id="aboutMe">
-                    I am 6ft tall, and I enjoy Cycling, Cross-country running and flying Drones :-)
+                    My name is Sebastian, and I enjoy Cycling, Cross-country running and flying Drones :-)
                 </div>
                 <p>
-                    <button type="button">Replace Text</button>
             </section>
         </main>
-        <footer>
-            <table>
-            <a href="#" style="text-align:center">LinkedIn</a>
+            <table style="margin: auto;">
+                <tr><td><a href="http://www.linkedin.com">LinkedIn</a></td><td><a href="http://www.twitter.co.uk">Twitter</a></td></tr>
             </table>
+        <footer>
             <p>
             <small>&copy; Copyright 2017, S.R.Frangiamore </small>
         </footer>
